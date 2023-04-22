@@ -1,1 +1,101 @@
+* {
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    /* For <a> use */
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px;
+    line-height: 50px;
+    /* Text */
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    /* Button */
+    background: #171100;
+    border-radius: 24.5px;
+}
+
+/* ====== HEADER ====== */
+.header {
+    background: #fffcf4;
+}
+
+.header.fixed {
+    position: sticky;
+    /* padding-top of .header. body 
+    (-) top of this (negative value)
+    = top-height when it's sticky-ed */
+    top: -28px;
+}
+.header .body {
+    display: flex;
+    align-items: center;
+    /* Don't let the header too close
+    to the top when sticky-ing */
+    padding: 36px 0 8px;
+}
+.nav {
+    margin-left: auto;
+}
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 21px;
+    font-size: 1.6rem;
+    color: #5f5b53;
+}
+
+.nav a:hover,
+.nav li.active a {
+    /* font-weight: 600; */
+    /* Use this for avoid text moving instead of font-weight*/
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.nav li.active a::after {
+    position: absolute;
+    content: "";
+    left: 21px;
+    bottom: 6px;
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: #171100;
+    border-radius: 1px;
+}
+
+.header .signup-btn {
+    min-width: 144px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
