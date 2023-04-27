@@ -21,6 +21,27 @@ a {
     text-decoration: none;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
 .main-content {
     width: 1170px;
     max-width: calc(100% - 48px);
@@ -46,6 +67,7 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .heading {
@@ -250,7 +272,6 @@ a {
     margin-left: 28px;
     border: none;
     background-color: transparent;
-    cursor: pointer;
 }
 
 .hero .watch-video .icon {
@@ -265,7 +286,6 @@ a {
 }
 
 .hero .watch-video .label {
-    font-family: "Poppins", sans-serif;
     margin-left: 14px;
     font-weight: 600;
     font-size: 1.8rem;
@@ -321,8 +341,83 @@ a {
 }
 
 .popular-top .control-btn:hover {
-    cursor: pointer;
     /* Reverse color */
     color: white;
+    background-color: var(--primary-color);
+}
+
+/* Course list */
+.popular .course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .course-item {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    /* We use transparent instead of 
+    removing the color to avoid the 
+    item's moving (like text underline) */
+    background: #ffffff;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .head,
+.popular .course-item .rating,
+.popular .course-item .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .course-item .thumbnail {
+    margin: -1px;
+    width: calc(100% + 2px);
+    /* The margin and the +2px 
+    make the border inside the thumbnail*/
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .title a,
+.popular .course-item .price {
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .rating .value {
+    margin-left: 6px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
+}
+.popular .course-item .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+/* Foot of Course Item */
+.popular .course-item .foot {
+    margin-top: 12px;
+}
+
+.popular .course-item .btn:hover {
+    color: #fff;
     background-color: var(--primary-color);
 }
