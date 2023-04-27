@@ -421,3 +421,71 @@ button {
     color: #fff;
     background-color: var(--primary-color);
 }
+
+/* ====== FEEDBACK ======= */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #2e2100;
+}
+
+.feedback-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .info .title {
+    margin-top: 18px;
+    /* Design */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.feedback-item .info .desc {
+    margin-top: 4px;
+    /* Design */
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb3;
+}
+
+.feedback-item .dots {
+    display: flex;
+    margin-top: 28px;
+    gap: 6px;
+}
+
+.feedback-item .dot {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+}
+
+.feedback-item .dot.active {
+    cursor: default;
+    background-color: var(--primary-color);
+}
+.feedback-item .content {
+    width: 65.81%;
+}
+
+.feedback-item blockquote {
+    margin-left: 30px;
+    /* Design */
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
+}
