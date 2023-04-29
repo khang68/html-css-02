@@ -489,3 +489,70 @@ button {
     line-height: 1.54;
     color: #ffffff;
 }
+
+/* ====== FEATURES ====== */
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .images {
+    display: flex;
+    gap: 0 30px;
+}
+
+.features .images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features img.lower {
+    margin-top: 34px;
+}
+
+.features .content {
+    width: 41%;
+}
+
+.features .desc {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    margin: 16px 0px;
+}
+
+.features .content .cta-btn {
+    margin-top: 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    min-width: 137px;
+}
+
+/* ====== FEATURES-2ND ====== */
+.features-2nd {
+    /** ft1 has padding bot = 65px
+    and ft2 has padding top = 65px
+    design: ft2 far from ft1 200px
+    so ft2 margin-top is 200-65-65 = 70px **/
+    margin-top: 70px;
+}
+
+.features-2nd .body {
+    flex-direction: row-reverse;
+}
+
+.features-2nd .content {
+    width: 49%;
+}
+
+.features-2nd .images img {
+    width: 470px;
+    height: 440px;
+}
