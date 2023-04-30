@@ -7,6 +7,11 @@
     --font-heading: "Sen", sans-serif;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -429,9 +434,17 @@ button {
     background-color: #2e2100;
 }
 
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
 .feedback-item {
     display: flex;
     justify-content: space-between;
+    /* For multi items */
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .feedback-item .avatar {
@@ -579,12 +592,19 @@ button {
 
 .blog .blog-list {
     display: flex;
+    overflow: hidden;
     margin-top: 55px;
     gap: 0 30px;
 }
 
 .blog .item {
-    width: 33.33%;
+    flex-shrink: 0;
+    /* .blog-list has gap left-right 30px 
+    and there is 3 items, so there are 2 gap
+    equals to 2*30 = 60px
+    Take 60 and divide by 3 items, so we must
+    calc(33.33% - 20px) */
+    width: calc(33.33% - 20px);
     background: #ffffff;
     border-radius: 16px;
 }
@@ -655,4 +675,102 @@ button {
 
 .blog .item .btn:hover {
     background-color: var(--primary-color);
+}
+
+.blog .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 38px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    cursor: default;
+    background-color: var(--primary-color);
+}
+
+/* ====== FOOTER ======= */
+.footer {
+    padding: 96px 135px 0;
+    background-color: #2e2100;
+}
+
+.footer .row {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+    width: 22%;
+}
+
+.footer .row .column:first-child {
+    width: 34%;
+    margin-top: 9px;
+}
+
+.footer .desc {
+    margin: 18px 0;
+    max-width: 267px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb2;
+}
+
+.socials {
+    display: flex;
+    gap: 18px;
+}
+
+.footer .title {
+    display: inline-block;
+    padding-bottom: 14px;
+    padding-right: 48px;
+    border-bottom: 1px solid #59554b;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #ffffff;
+}
+
+.footer .list {
+    margin-top: 28px;
+}
+
+.footer .list a {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb2;
+}
+
+.footer .list li:last-child a {
+    margin-bottom: 0;
+}
+
+.footer .list strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .copyright {
+    padding: 28px 0;
+}
+
+.footer .copyright p {
+    /* Design */
+    font-size: 1.4rem;
+    line-height: 1.86;
+    text-align: center;
+    color: #807d74;
 }
